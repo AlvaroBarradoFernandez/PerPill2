@@ -28,7 +28,7 @@ final class VCCalendarViewController: UIViewController {
         super.viewDidLoad()
         let formatter = DateFormatter()
         formatter.dateFormat = "dd.MM.yyyy HH:mm:ss"
-        let startDate = formatter.date(from: "01.01.2000 00:00:00")!
+        let startDate = formatter.date(from: "01.01.1970 00:00:00")!
         let endDate = formatter.date(from: "31.12.2029 00:00:00")!
         let calendar = VACalendar(
             startDate: startDate,
@@ -50,8 +50,7 @@ final class VCCalendarViewController: UIViewController {
         calendarView.setup()
         view.addSubview(calendarView)
         
-        //let fecha:Date = Date()
-        //print(fecha)
+        
         calendarView.selectDates([DataHolder.sharedInstance.fechaSeleccionada])
         
         var arColoresDots:[UIColor] = []
@@ -63,17 +62,13 @@ final class VCCalendarViewController: UIViewController {
         } else  if DataHolder.sharedInstance.FinRegla{
            arColoresDots.append(.red)
         }
-
         if DataHolder.sharedInstance.Relaciones{
             arColoresDots.append(.blue)
         }
-
         if DataHolder.sharedInstance.Pildora{
-            arColoresDots.append(.green)
+            arColoresDots.append(.purple)
         }
- 
         calendarView.setSupplementaries([(DataHolder.sharedInstance.fechaSeleccionada, [VADaySupplementary.bottomDots(arColoresDots)])])
-        
     }
 }
 
@@ -128,14 +123,6 @@ extension VCCalendarViewController: VADayViewAppearanceDelegate {
             return -7
         }
     }
- /*   func daySelected(for state: VADayState){
-        switch state {
-        case .selected:
-            return calendarView.setSupplementaries([(Date().addingTimeInterval(0), [VADaySupplementary.bottomDots([.red])])])
-        default:
-            return
-        }
-    }*/
 }
 
 extension VCCalendarViewController: VACalendarViewDelegate {

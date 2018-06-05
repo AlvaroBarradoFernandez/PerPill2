@@ -23,7 +23,7 @@ class VCNotas: UIViewController {
         super.didReceiveMemoryWarning()
     }
     @IBAction func guardarNotas(){
-        var sTransicionNotas:String = "notas"
+        let sTransicionNotas:String = "notas"
         self.performSegue(withIdentifier: sTransicionNotas, sender: self)
         DataHolder.sharedInstance.InicioRegla = (stwInicioRegla?.isOn)!
         DataHolder.sharedInstance.SigoRegla = (stwSigoRegla?.isOn)!

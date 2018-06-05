@@ -494,15 +494,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Buscar"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4c-yg-Pip">
-                                <rect key="frame" x="55" y="505" width="80" height="30"/>
-                                <state key="normal" title="Añadir Foro"/>
-                                <connections>
-                                    <segue destination="P9b-DY-Mxo" kind="show" id="SOu-tQ-PyO"/>
-                                </connections>
-                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Fud-GO-GOh">
-                                <rect key="frame" x="16" y="84" width="343" height="390"/>
+                                <rect key="frame" x="16" y="84" width="343" height="441"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="celda" id="D6N-bY-fro" customClass="CeldaForo" customModule="Hito1" customModuleProvider="target">
@@ -525,13 +518,19 @@
                                                 <constraint firstItem="29r-2o-Pd6" firstAttribute="leading" secondItem="We3-lp-hts" secondAttribute="leadingMargin" id="wPr-Gf-9LT"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.85057855400000004" green="1" blue="0.5845559749" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="Nombre" destination="29r-2o-Pd6" id="FzG-kB-aLh"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4c-yg-Pip">
+                                <rect key="frame" x="279" y="617" width="80" height="30"/>
+                                <state key="normal" title="Añadir Foro"/>
+                                <connections>
+                                    <segue destination="P9b-DY-Mxo" kind="show" id="SOu-tQ-PyO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99970835449999995" green="0.8202103972" blue="0.95169907809999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -539,7 +538,7 @@
                             <constraint firstItem="jBN-aN-bB9" firstAttribute="top" secondItem="Q2y-MC-At0" secondAttribute="top" id="5Lv-dc-cKD"/>
                             <constraint firstItem="o4c-yg-Pip" firstAttribute="leading" secondItem="t2A-nT-Xsl" secondAttribute="leading" constant="55" id="6m0-Yk-o1M"/>
                             <constraint firstItem="t2A-nT-Xsl" firstAttribute="bottom" secondItem="o4c-yg-Pip" secondAttribute="bottom" constant="83" id="GMu-Sv-he7"/>
-                            <constraint firstItem="o4c-yg-Pip" firstAttribute="top" secondItem="Fud-GO-GOh" secondAttribute="bottom" constant="31" id="GUR-wm-lin"/>
+                            <constraint firstItem="o4c-yg-Pip" firstAttribute="top" secondItem="Fud-GO-GOh" secondAttribute="bottom" constant="29" id="GUR-wm-lin"/>
                             <constraint firstItem="Fud-GO-GOh" firstAttribute="trailing" secondItem="CHf-gI-FV4" secondAttribute="trailingMargin" id="Gip-DN-AUf"/>
                             <constraint firstItem="Q2y-MC-At0" firstAttribute="leading" secondItem="jBN-aN-bB9" secondAttribute="trailing" constant="34" id="VxW-bS-I6X"/>
                             <constraint firstItem="Fud-GO-GOh" firstAttribute="leading" secondItem="jBN-aN-bB9" secondAttribute="leading" id="cT0-od-DMs"/>
@@ -568,42 +567,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gly-vp-ql9" userLabel="Titulo">
-                                <rect key="frame" x="82" y="185" width="211" height="30"/>
+                                <rect key="frame" x="82" y="93" width="211" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Título del Foro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8d3-IL-aIW">
-                                <rect key="frame" x="123" y="136" width="170" height="21"/>
+                                <rect key="frame" x="123" y="35" width="170" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0Gn-UX-pFR">
-                                <rect key="frame" x="84" y="252" width="211" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="poD-7s-ywA" userLabel="MensajeC">
-                                <rect key="frame" x="67" y="391" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Mensaje" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4JA-ls-U1g" userLabel="MensajeL">
-                                <rect key="frame" x="155" y="323" width="64" height="21"/>
+                                <rect key="frame" x="155" y="178" width="64" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fm-4y-1BE">
-                                <rect key="frame" x="264" y="589" width="43" height="30"/>
+                                <rect key="frame" x="316" y="617" width="43" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Volver"/>
                                 <connections>
@@ -612,13 +597,20 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r5n-vb-75l">
-                                <rect key="frame" x="67" y="589" width="42" height="30"/>
+                                <rect key="frame" x="16" y="617" width="42" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Enviar"/>
                                 <connections>
                                     <segue destination="jfn-TU-FaA" kind="show" id="pgd-EU-drg"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="poD-7s-ywA" userLabel="MensajeC">
+                                <rect key="frame" x="67" y="207" width="240" height="229"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.99970835449999995" green="0.8202103972" blue="0.95169907809999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="SQh-d3-aoo"/>
@@ -631,7 +623,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7pu-o5-Ydc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4094" y="-546"/>
+            <point key="canvasLocation" x="4093.5999999999999" y="-546.47676161919048"/>
         </scene>
         <!--Foro Detalle Mostrar-->
         <scene sceneID="OcL-mk-ZzD">
@@ -648,6 +640,38 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gi4-vP-pGp">
+                                <rect key="frame" x="316" y="617" width="43" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Volver"/>
+                                <connections>
+                                    <segue destination="jfn-TU-FaA" kind="show" id="EJr-vI-4bE"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="147-fY-osA">
+                                <rect key="frame" x="16" y="68" width="343" height="541"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="517" id="HCK-ds-X9x">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="517"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HCK-ds-X9x" id="nlc-HK-wQ1">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="516.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3y-Wu-Q2L">
+                                                    <rect key="frame" x="15" y="11" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.99970835449999995" green="0.8202103972" blue="0.95169907809999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="MwA-tn-mkj"/>
@@ -658,7 +682,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Tg-NS-Kw7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4804" y="-547"/>
+            <point key="canvasLocation" x="4804" y="-547.37631184407803"/>
         </scene>
         <!--Calendario-->
         <scene sceneID="piA-V6-ITJ">
@@ -1125,8 +1149,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="33P-jq-OCS"/>
-        <segue reference="FNV-P3-Wbk"/>
-        <segue reference="q8E-ZR-XbG"/>
+        <segue reference="WvC-94-8cK"/>
+        <segue reference="pgd-EU-drg"/>
         <segue reference="IMd-Qc-8kj"/>
     </inferredMetricsTieBreakers>
 </document>

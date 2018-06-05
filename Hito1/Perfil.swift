@@ -30,15 +30,12 @@ class Perfil: NSObject {
         fWeight = valores["weight"] as? Float
         sImg = valores["url_image"] as? String
         sDate = valores["date"] as? Date
-        
-        print("****************************", sImg)
         if sImg != nil{
             descargarImagen()
         }
     }
     
     func descargarImagen(){
-        
         print("-------")
         let imagenDes = DataHolder.sharedInstance.HMIMG[sImg!]
         if imagenDes != nil{
@@ -66,10 +63,8 @@ class Perfil: NSObject {
         mapTemp["weight"] = fWeight
         mapTemp["url_image"] = sImg
         mapTemp["date"] = sDate
-        
         return mapTemp
     }
-    
     
     func crearEvento(){
         let ev:Evento = Evento()
@@ -80,8 +75,6 @@ class Perfil: NSObject {
         ev.bPildora = DataHolder.sharedInstance.Pildora
         ev.dFecha = DataHolder.sharedInstance.fechaSeleccionada
         let strRuta:String = String(format: "/Perfiles/%@/eventos", sID!)
-        
         DataHolder.sharedInstance.firestoreDB?.collection(strRuta).addDocument(data: ev.getMap())
     }
-    
 }

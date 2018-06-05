@@ -21,11 +21,6 @@ class ForoNuevo: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-//    func Gtitulo(){
-//        DataHolder.sharedInstance.SaveT.sTitulo = Titulo?.text
 
-//        let refPerfil = DataHolder.sharedInstance.firestoreDB?.collection("Foro").document((DataHolder.sharedInstance.firUser?.uid)!).setData(DataHolder.sharedInstance.sTitulo.getMap())
-//
-//    }
 
 }
