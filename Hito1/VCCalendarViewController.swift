@@ -49,8 +49,7 @@ final class VCCalendarViewController: UIViewController {
         calendarView.scrollDirection = .vertical
         calendarView.setup()
         view.addSubview(calendarView)
-        
-        
+
         calendarView.selectDates([DataHolder.sharedInstance.fechaSeleccionada])
         
         var arColoresDots:[UIColor] = []
@@ -68,7 +67,30 @@ final class VCCalendarViewController: UIViewController {
         if DataHolder.sharedInstance.Pildora{
             arColoresDots.append(.purple)
         }
+       
         calendarView.setSupplementaries([(DataHolder.sharedInstance.fechaSeleccionada, [VADaySupplementary.bottomDots(arColoresDots)])])
+        for event in DataHolder.sharedInstance.miPerfil.arEventos {
+            puntos(evento: event)
+        }
+    }
+    
+    func puntos(evento:Evento){
+        var arColoresDots:[UIColor] = []
+        
+        if evento.bInicioRegla! {
+            arColoresDots.append(.red)
+        } else if evento.bSigoRegla!{
+            arColoresDots.append(.red)
+        } else  if evento.bFinRegla!{
+            arColoresDots.append(.red)
+        }
+        if evento.bRelaciones!{
+            arColoresDots.append(.blue)
+        }
+        if evento.bPildora!{
+            arColoresDots.append(.purple)
+        }
+        calendarView.setSupplementaries([(evento.dFecha!, [VADaySupplementary.bottomDots(arColoresDots)])])
     }
 }
 

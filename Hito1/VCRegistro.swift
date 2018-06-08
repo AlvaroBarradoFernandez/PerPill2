@@ -20,6 +20,20 @@ class VCRegistro: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         super.didReceiveMemoryWarning()
     }
 
+    func showAlert1() {
+        let str = String(format: "Por favor cree uno nuevo")
+        let alertController = UIAlertController(title: "Usuario ya existe", message: str, preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "Volver", style: UIAlertActionStyle.default,handler: nil))
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func showAlert2() {
+        let str = String(format: "Las contraseñas no coinciden, \n por favor introduzcalas de nuevo")
+        let alertController = UIAlertController(title: "Contraseña incorrecta", message: str, preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "Volver", style: UIAlertActionStyle.default,handler: nil))
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
     @IBAction func clickRegistrar(){
         DataHolder.sharedInstance.miPerfil.iPass = txtfPass?.text
         DataHolder.sharedInstance.miPerfil.semail = txtfEmail?.text
@@ -29,9 +43,13 @@ class VCRegistro: UIViewController, UIImagePickerControllerDelegate, UINavigatio
                     DataHolder.sharedInstance.firUser = user?.user
                     print("Las contraseñas coinciden")
                     self.performSegue(withIdentifier: "registrar", sender: self)
+                }else{
+                    self.showAlert1()
+                    print("El usuario ya existe")
                 }
             }
         }else{
+            self.showAlert2()
             print("Las contraseñas no coinciden")
         }
     }

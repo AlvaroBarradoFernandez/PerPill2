@@ -20,6 +20,7 @@ class Perfil: NSObject {
     var sImg:String?
     var sDate:Date?
     var miImg:UIImage?
+    var arEventos:[Evento] = []
     
     func setMap(valores:[String:Any]) {
         sFirst = valores["first"] as? String
@@ -33,7 +34,23 @@ class Perfil: NSObject {
         if sImg != nil{
             descargarImagen()
         }
+        let strRuta:String = String(format: "/Perfiles/%@/eventos/",self.sID!)
+        DataHolder.sharedInstance.firestoreDB?.collection(strRuta).addSnapshotListener() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                self.arEventos = []
+                for document in querySnapshot!.documents {
+                    let even:Evento = Evento()
+                    even.sID=document.documentID
+                    even.setMap(valores:document.data())
+                    self.arEventos.append(even)
+                    print("\(document.documentID) => \(document.data())")
+                }
+            }
+        }
     }
+    
     
     func descargarImagen(){
         print("-------")
@@ -75,7 +92,8 @@ class Perfil: NSObject {
         ev.bPildora = DataHolder.sharedInstance.Pildora
         ev.dFecha = DataHolder.sharedInstance.fechaSeleccionada
         let strRuta:String = String(format: "/Perfiles/%@/eventos", sID!)
-        DataHolder.sharedInstance.firestoreDB?.collection(strRuta).addDocument(data: ev.getMap())
+        ev.sID=DataHolder.sharedInstance.firestoreDB?.collection(strRuta).addDocument(data: ev.getMap()).documentID
+        self.arEventos.append(ev)
     }
 
 }

@@ -15,6 +15,7 @@ class Evento: NSObject {
     var bRelaciones:Bool?
     var bPildora:Bool?
     var dFecha:Date?
+    var sID:String?
     
     func setMap(valores:[String:Any]) {
         bInicioRegla = valores["InicioRegla"] as? Bool

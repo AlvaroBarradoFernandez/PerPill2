@@ -22,6 +22,14 @@ class VCLogin:  UIViewController, UIImagePickerControllerDelegate, UINavigationC
         super.didReceiveMemoryWarning()
     }
     
+    func showAlert3() {
+        //Mostramos al usuario en un alert los datos de su registro
+        let str = String(format: "El usuario o contraseña es incorrecto, \n por favor, vuelva a escribirlos")
+        let alertController = UIAlertController(title: "Dato incorrecto", message: str, preferredStyle: UIAlertControllerStyle.alert)
+        alertController.addAction(UIAlertAction(title: "Volver", style: UIAlertActionStyle.default,handler: nil))
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
     @IBAction func accionbuttonLogear(){
         print(txtfUsuario?.text)
         print(txtfContraseña?.text)
@@ -33,11 +41,21 @@ class VCLogin:  UIViewController, UIImagePickerControllerDelegate, UINavigationC
                     DataHolder.sharedInstance.miPerfil.sID = document?.documentID
                     DataHolder.sharedInstance.miPerfil.setMap(valores:(document?.data())!)
                     print(DataHolder.sharedInstance.miPerfil.sFirst!)
+                    DataHolder.sharedInstance.fechaSeleccionada = Date()
+                    DataHolder.sharedInstance.InicioRegla = false
+                    DataHolder.sharedInstance.SigoRegla = false
+                    DataHolder.sharedInstance.FinRegla = false
+                    DataHolder.sharedInstance.Relaciones = false
+                    DataHolder.sharedInstance.Pildora = false
                     self.performSegue(withIdentifier: "entrar", sender: self)
                 }else{
                     print(error!)
                     }
                 }
+            }
+            else{
+                self.showAlert3()
+                print("Usuario o contraseña incorrecto")
             }
         }
     }
