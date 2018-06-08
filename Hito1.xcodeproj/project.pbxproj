@@ -28,6 +28,9 @@
 		2AB66F0020C1401900B42E63 /* CeldaForo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB66EFF20C1401900B42E63 /* CeldaForo.swift */; };
 		2AB66F0220C15A1900B42E63 /* VCNotas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB66F0120C15A1900B42E63 /* VCNotas.swift */; };
 		2AB66F0420C16D3C00B42E63 /* Evento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB66F0320C16D3C00B42E63 /* Evento.swift */; };
+		2AB66F0620C6772000B42E63 /* ArrayMensaje.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB66F0520C6772000B42E63 /* ArrayMensaje.swift */; };
+		2AB66F0820C68D0F00B42E63 /* ForoMensaje.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB66F0720C68D0F00B42E63 /* ForoMensaje.swift */; };
+		2AB66F0A20C68F3C00B42E63 /* CeldaMensaje.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB66F0920C68F3C00B42E63 /* CeldaMensaje.swift */; };
 		2AF35EAA207CDD6200695453 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2AF35EA9207CDD6100695453 /* GoogleService-Info.plist */; };
 		2AF35EAC207CE1B000695453 /* DataHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF35EAB207CE1B000695453 /* DataHolder.swift */; };
 		2AF35EAE207F88DA00695453 /* Perfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AF35EAD207F88DA00695453 /* Perfil.swift */; };
@@ -61,6 +64,9 @@
 		2AB66EFF20C1401900B42E63 /* CeldaForo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CeldaForo.swift; path = ../../../../Desktop/PerPill/Hito1C/Hito1/Hito1/CeldaForo.swift; sourceTree = "<group>"; };
 		2AB66F0120C15A1900B42E63 /* VCNotas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCNotas.swift; sourceTree = "<group>"; };
 		2AB66F0320C16D3C00B42E63 /* Evento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Evento.swift; sourceTree = "<group>"; };
+		2AB66F0520C6772000B42E63 /* ArrayMensaje.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayMensaje.swift; sourceTree = "<group>"; };
+		2AB66F0720C68D0F00B42E63 /* ForoMensaje.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForoMensaje.swift; sourceTree = "<group>"; };
+		2AB66F0920C68F3C00B42E63 /* CeldaMensaje.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaMensaje.swift; sourceTree = "<group>"; };
 		2AF35EA9207CDD6100695453 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2AF35EAB207CE1B000695453 /* DataHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHolder.swift; sourceTree = "<group>"; };
 		2AF35EAD207F88DA00695453 /* Perfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Perfil.swift; sourceTree = "<group>"; };
@@ -109,9 +115,7 @@
 				2AA312BB20751E8200C46165 /* Main.storyboard */,
 				2AA312C120751E8200C46165 /* Assets.xcassets */,
 				2AA312C320751E8200C46165 /* LaunchScreen.storyboard */,
-				2AB66F0320C16D3C00B42E63 /* Evento.swift */,
 				2AB25A0420AEE32600850E7C /* VCConfiguracion.swift */,
-				2AB66F0120C15A1900B42E63 /* VCNotas.swift */,
 				2AA312C620751E8200C46165 /* Info.plist */,
 				2AA312BE20751E8200C46165 /* Hito1.xcdatamodeld */,
 				2AA312CE2076083600C46165 /* MiTabla1.swift */,
@@ -120,13 +124,18 @@
 				2AAAB81A2088795500F02AF3 /* VCMap.swift */,
 				2AAAB81E208F385A00F02AF3 /* ViewControllerCollection.swift */,
 				2AAAB820208F53EA00F02AF3 /* micelda2CollectionViewCell.swift */,
-				2AB66EFF20C1401900B42E63 /* CeldaForo.swift */,
 				2AAAB82420A3036A00F02AF3 /* VCRegistro.swift */,
 				2AAAB82820A307DC00F02AF3 /* VCLogin.swift */,
+				2AB66F0320C16D3C00B42E63 /* Evento.swift */,
+				2AB66F0120C15A1900B42E63 /* VCNotas.swift */,
+				2AB66EFF20C1401900B42E63 /* CeldaForo.swift */,
 				2A7E45C920B7F33800863C13 /* Foro.swift */,
 				2A7E45CF20B7F62000863C13 /* ArrayForos.swift */,
-				2A3E6BC020B86B2D00E61E4F /* ForoNuevo.swift */,
 				2A5B48DF20B8438F003137AA /* VCCalendarViewController.swift */,
+				2A3E6BC020B86B2D00E61E4F /* ForoNuevo.swift */,
+				2AB66F0520C6772000B42E63 /* ArrayMensaje.swift */,
+				2AB66F0720C68D0F00B42E63 /* ForoMensaje.swift */,
+				2AB66F0920C68F3C00B42E63 /* CeldaMensaje.swift */,
 			);
 			path = Hito1;
 			sourceTree = "<group>";
@@ -290,9 +299,12 @@
 				2AB66F0020C1401900B42E63 /* CeldaForo.swift in Sources */,
 				2AF35EAE207F88DA00695453 /* Perfil.swift in Sources */,
 				2AF35EAC207CE1B000695453 /* DataHolder.swift in Sources */,
+				2AB66F0820C68D0F00B42E63 /* ForoMensaje.swift in Sources */,
+				2AB66F0A20C68F3C00B42E63 /* CeldaMensaje.swift in Sources */,
 				2A7E45D020B7F62000863C13 /* ArrayForos.swift in Sources */,
 				2AB25A0520AEE32600850E7C /* VCConfiguracion.swift in Sources */,
 				2AA312D12076110700C46165 /* micelda1.swift in Sources */,
+				2AB66F0620C6772000B42E63 /* ArrayMensaje.swift in Sources */,
 				2AA312BA20751E8200C46165 /* ViewController.swift in Sources */,
 				2AB66F0420C16D3C00B42E63 /* Evento.swift in Sources */,
 				2A3E6BC120B86B2E00E61E4F /* ForoNuevo.swift in Sources */,

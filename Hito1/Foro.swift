@@ -54,6 +54,9 @@ class Foro: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+         DataHolder.sharedInstance.sIDseleccion=self.arForos[indexPath.row].sID
         self.performSegue(withIdentifier: "tran1", sender: self)
     }
+    
+    
 }

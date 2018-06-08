@@ -77,4 +77,5 @@ class Perfil: NSObject {
         let strRuta:String = String(format: "/Perfiles/%@/eventos", sID!)
         DataHolder.sharedInstance.firestoreDB?.collection(strRuta).addDocument(data: ev.getMap())
     }
+
 }

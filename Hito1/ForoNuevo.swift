@@ -9,11 +9,7 @@
 import UIKit
 
 class ForoNuevo: UIViewController {
-    @IBOutlet var Titulo:UITextField?
-    @IBOutlet var MensajeC:UITextField?
-    @IBOutlet var buttonGrabar:UIButton?
-    var STitulo:String?
-    var Tit:ForoNuevo = ForoNuevo()
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }

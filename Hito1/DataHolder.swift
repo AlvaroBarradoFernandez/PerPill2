@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import FirebaseStorage
 var arPerfiles:[Perfil] = []
+//var arMensajes:[CosasDelForo] = []
 class DataHolder: NSObject {
     static let sharedInstance:DataHolder = DataHolder()
     var firestoreDB:Firestore?
@@ -26,7 +27,10 @@ class DataHolder: NSObject {
     var Relaciones:Bool = false
     var Pildora:Bool = false
     var fechaSeleccionada:Date = Date()
+    var sIDseleccion:String?
 
+    //    var NombreForo:UITextField?
+    //    var TextoForo:UITextField?
     
     func initFireBase(){
         FirebaseApp.configure()
@@ -53,6 +57,7 @@ class DataHolder: NSObject {
             }
         }
     }
+    
     
     func registro(txtfEmail:String, pass txtfPass:String){
         Auth.auth().createUser(withEmail: (txtfEmail), password: (txtfPass)) {(user, error) in
