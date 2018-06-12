@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class ForoNuevoViewController: UIViewController {
     @IBOutlet var Titulo:UITextField?
     @IBOutlet var Mensaje:UITextView?
+    var arFN:[OForoNuevo] = []
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,17 +25,19 @@ class ForoNuevoViewController: UIViewController {
     }
     
     @IBAction func grabar(){
+        DataHolder.sharedInstance.miOForo.sTitulo = Titulo?.text
         let sTransicionNotas:String = "Vforo"
         self.performSegue(withIdentifier: sTransicionNotas, sender: self)
+        self.crearEvento()
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func crearEvento(){
+        let ev:OForoNuevo = OForoNuevo()
+        ev.sTitulo = DataHolder.sharedInstance.TituloF
+        DataHolder.sharedInstance.firestoreDB?.collection("Foros").addDocument(data: ev.getMap())
+        self.arFN.append(ev)
+        
+        
     }
-    */
 
 }

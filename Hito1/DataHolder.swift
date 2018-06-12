@@ -17,6 +17,7 @@ class DataHolder: NSObject {
     static let sharedInstance:DataHolder = DataHolder()
     var firestoreDB:Firestore?
     var miPerfil:Perfil = Perfil()
+    var miOForo:OForoNuevo = OForoNuevo()
     var arPerfiles:[Perfil] = []
     var HMIMG:[String:UIImage]=[:]
     var firStorage:Storage?
@@ -31,8 +32,8 @@ class DataHolder: NSObject {
     var fechaSeleccionada:Date = Date()
     var sIDseleccion:String?
     //ForoNuevo
-    var TituloF:UITextField?
-    var MensajeF:UITextView?
+    var TituloF:String?
+    var MensajeF:String?
     
     func initFireBase(){
         FirebaseApp.configure()
