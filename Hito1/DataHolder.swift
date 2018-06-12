@@ -9,6 +9,8 @@
 import UIKit
 import Firebase
 import FirebaseStorage
+
+
 var arPerfiles:[Perfil] = []
 //var arMensajes:[CosasDelForo] = []
 class DataHolder: NSObject {
@@ -28,9 +30,9 @@ class DataHolder: NSObject {
     var Pildora:Bool = false
     var fechaSeleccionada:Date = Date()
     var sIDseleccion:String?
-
-    //    var NombreForo:UITextField?
-    //    var TextoForo:UITextField?
+    //ForoNuevo
+    var TituloF:UITextField?
+    var MensajeF:UITextView?
     
     func initFireBase(){
         FirebaseApp.configure()
@@ -38,6 +40,9 @@ class DataHolder: NSObject {
         firStorage = Storage.storage()
         firStorageRef = firStorage?.reference()
     }
+    
+        
+    
     
     func descargarPerfiles(delegate:DataHolderDelegate){
         firestoreDB?.collection("Perfiles").getDocuments() { (querySnapshot, err) in

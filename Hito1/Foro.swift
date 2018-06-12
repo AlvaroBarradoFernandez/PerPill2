@@ -44,6 +44,10 @@ class Foro: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celda = tableView.dequeueReusableCell(withIdentifier: "celda") as! CeldaForo
         celda.Nombre?.text=self.arForos[indexPath.row].sID
+        navigationController?.navigationBar.prefersLargeTitles = true
+        let searchbar = UISearchController(searchResultsController: nil)
+        navigationItem.searchController = searchbar
+        navigationItem.hidesSearchBarWhenScrolling=false
         return celda
     }
     
@@ -58,5 +62,11 @@ class Foro: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.performSegue(withIdentifier: "tran1", sender: self)
     }
     
+//    func searchba(){
+//        navigationController?.navigationBar.prefersLargeTitles = true
+//        let searchbar = UISearchController(searchResultsController: nil)
+//        navigationItem.searchController = searchbar
+//        navigationItem.hidesSearchBarWhenScrolling=false
+//    }
     
 }

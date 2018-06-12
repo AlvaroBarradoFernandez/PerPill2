@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2A3E6BC120B86B2E00E61E4F /* ForoNuevo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3E6BC020B86B2D00E61E4F /* ForoNuevo.swift */; };
+		2A2365B620CFBC13000081F1 /* ForoNuevoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2365B520CFBC13000081F1 /* ForoNuevoViewController.swift */; };
+		2A2365B820CFBC34000081F1 /* OForoNuevo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2365B720CFBC34000081F1 /* OForoNuevo.swift */; };
 		2A5B48E020B8438F003137AA /* VCCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A5B48DF20B8438F003137AA /* VCCalendarViewController.swift */; };
 		2A7E45CA20B7F33800863C13 /* Foro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7E45C920B7F33800863C13 /* Foro.swift */; };
 		2A7E45D020B7F62000863C13 /* ArrayForos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7E45CF20B7F62000863C13 /* ArrayForos.swift */; };
@@ -41,7 +42,8 @@
 /* Begin PBXFileReference section */
 		00699A5A0D82EBE80ACD9D85 /* Pods-Hito1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hito1.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hito1/Pods-Hito1.release.xcconfig"; sourceTree = "<group>"; };
 		27324900B0BE3CB5AAE0B826 /* Pods_Hito1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hito1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A3E6BC020B86B2D00E61E4F /* ForoNuevo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForoNuevo.swift; sourceTree = "<group>"; };
+		2A2365B520CFBC13000081F1 /* ForoNuevoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForoNuevoViewController.swift; sourceTree = "<group>"; };
+		2A2365B720CFBC34000081F1 /* OForoNuevo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OForoNuevo.swift; sourceTree = "<group>"; };
 		2A5B48DF20B8438F003137AA /* VCCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCCalendarViewController.swift; sourceTree = "<group>"; };
 		2A7E45C920B7F33800863C13 /* Foro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foro.swift; sourceTree = "<group>"; };
 		2A7E45CF20B7F62000863C13 /* ArrayForos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayForos.swift; sourceTree = "<group>"; };
@@ -132,10 +134,11 @@
 				2A7E45C920B7F33800863C13 /* Foro.swift */,
 				2A7E45CF20B7F62000863C13 /* ArrayForos.swift */,
 				2A5B48DF20B8438F003137AA /* VCCalendarViewController.swift */,
-				2A3E6BC020B86B2D00E61E4F /* ForoNuevo.swift */,
 				2AB66F0520C6772000B42E63 /* ArrayMensaje.swift */,
 				2AB66F0720C68D0F00B42E63 /* ForoMensaje.swift */,
 				2AB66F0920C68F3C00B42E63 /* CeldaMensaje.swift */,
+				2A2365B520CFBC13000081F1 /* ForoNuevoViewController.swift */,
+				2A2365B720CFBC34000081F1 /* OForoNuevo.swift */,
 			);
 			path = Hito1;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 			files = (
 				2AA312CF2076083600C46165 /* MiTabla1.swift in Sources */,
 				2AAAB81B2088795600F02AF3 /* VCMap.swift in Sources */,
+				2A2365B620CFBC13000081F1 /* ForoNuevoViewController.swift in Sources */,
 				2AFB34FD20AEFF1F00F16580 /* VCRegistrar.swift in Sources */,
 				2AAAB82920A307DC00F02AF3 /* VCLogin.swift in Sources */,
 				2AAAB81F208F385A00F02AF3 /* ViewControllerCollection.swift in Sources */,
@@ -307,9 +311,9 @@
 				2AB66F0620C6772000B42E63 /* ArrayMensaje.swift in Sources */,
 				2AA312BA20751E8200C46165 /* ViewController.swift in Sources */,
 				2AB66F0420C16D3C00B42E63 /* Evento.swift in Sources */,
-				2A3E6BC120B86B2E00E61E4F /* ForoNuevo.swift in Sources */,
 				2AAAB821208F53EA00F02AF3 /* micelda2CollectionViewCell.swift in Sources */,
 				2AB66F0220C15A1900B42E63 /* VCNotas.swift in Sources */,
+				2A2365B820CFBC34000081F1 /* OForoNuevo.swift in Sources */,
 				2A7E45CA20B7F33800863C13 /* Foro.swift in Sources */,
 				2AA312B820751E8200C46165 /* AppDelegate.swift in Sources */,
 				2AA312C020751E8200C46165 /* Hito1.xcdatamodeld in Sources */,

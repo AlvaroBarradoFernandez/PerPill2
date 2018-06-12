@@ -19,4 +19,11 @@ class ArrayForos: NSObject {
         mapTemp["Foros"] = sForo
         return getMap()
 }
+//    func MensajeCrear(){
+//        let ev:ObjetosForoNuevo = ObjetosForoNuevo()
+//        ev.sTituloF = DataHolder.sharedInstance.TituloF
+//        ev.sMensajeF = DataHolder.sharedInstance.MensajeF
+//        let strRuta:String = String(format: "/Foros/%@/Mensaje/",DataHolder.sharedInstance.sIDseleccion!)
+//    DataHolder.sharedInstance.firestoreDB?.collection(strRuta).addDocument(data:ev.getMap()).documentID
+//    }
 }
