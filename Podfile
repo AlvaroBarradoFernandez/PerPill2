@@ -8,7 +8,8 @@ target 'Hito1' do
   # Pods for Hito1
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
-  pod 'Firebase/Firestore'
+  pod 'Firebase/Firestore', '5.1.0'
   pod 'Firebase/Storage'
   pod 'VACalendar'
+  pod 'Firebase/Database'
 end

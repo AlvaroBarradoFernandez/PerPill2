@@ -8,14 +8,28 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
 
 class ForoMensaje: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet var TablaMensaje:UITableView?
     var arM:[ArrayMensaje] = []
     var sID:String?
     override func viewDidLoad() {
+//        let strRuta:String = String(format: "Foros/%@/Mensaje/",DataHolder.sharedInstance.sIDseleccion!)
+//
+//        let db = Firestore.firestore()
+//        db.collection("Foros").getDocuments() { (QuerySnapshot, err) in
+//            if let err = err {
+//                print("Error getting documents: \(err)")
+//            }else{
+//                for document in QuerySnapshot!.documents{
+//                    print("\(document.documentID)=>\(document.data())")
+//                }
+//            }
+//        }
+
         super.viewDidLoad()
-        let strRuta:String = String(format: "/Foros/%@/Mensaje/",DataHolder.sharedInstance.sIDseleccion!)
+        let strRuta:String = String(format: "Foros/%@/Mensaje",DataHolder.sharedInstance.sIDseleccion!)
         DataHolder.sharedInstance.firestoreDB?.collection(strRuta).addSnapshotListener() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")

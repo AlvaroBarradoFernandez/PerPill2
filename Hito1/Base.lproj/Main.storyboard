@@ -506,8 +506,7 @@
                                 <rect key="frame" x="313" y="617" width="47" height="30"/>
                                 <state key="normal" title="Grabar"/>
                                 <connections>
-                                    <action selector="grabar" destination="SLU-Op-pvr" eventType="touchUpInside" id="Anh-eD-woI"/>
-                                    <segue destination="jfn-TU-FaA" kind="show" identifier="Vforo" id="aq9-Oe-vdd"/>
+                                    <action selector="boton" destination="SLU-Op-pvr" eventType="touchUpInside" id="YPJ-TQ-Skc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePj-ze-aJJ">
@@ -544,8 +543,8 @@
                         <viewLayoutGuide key="safeArea" id="hbn-oJ-nW7"/>
                     </view>
                     <connections>
-                        <outlet property="Mensaje" destination="aH9-6q-ZcA" id="Bk7-NH-gLH"/>
-                        <outlet property="Titulo" destination="Z2o-OZ-791" id="AHN-Xa-GMK"/>
+                        <outlet property="textFieldGenre" destination="aH9-6q-ZcA" id="Yba-oG-NNx"/>
+                        <outlet property="textFieldName" destination="Z2o-OZ-791" id="ArD-29-Zxy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yan-7C-QMk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1133,7 +1132,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="33P-jq-OCS"/>
         <segue reference="FNV-P3-Wbk"/>
-        <segue reference="aq9-Oe-vdd"/>
+        <segue reference="93F-Kz-UuI"/>
         <segue reference="HgM-af-4WT"/>
     </inferredMetricsTieBreakers>
 </document>

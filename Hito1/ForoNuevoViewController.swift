@@ -1,43 +1,49 @@
 //
-//  ForoNuevoViewController.swift
-//  Hito1
+//  ViewController.swift
+//  FIRDBExample
 //
-//  Created by Alvaro Barrado on 12/6/18.
-//  Copyright © 2018 Alvaro Barrado. All rights reserved.
+//  Created by Belal Khan on 05/03/17.
+//  Copyright © 2017 Belal Khan. All rights reserved.
 //
 
 import UIKit
+
+//importing firebase
+import Firebase
 import FirebaseDatabase
 
-class ForoNuevoViewController: UIViewController {
-    @IBOutlet var Titulo:UITextField?
-    @IBOutlet var Mensaje:UITextView?
-    var arFN:[OForoNuevo] = []
+class ForoNuevoViewController: UIViewController{
+    
+    
+    
+    //defining firebase reference var
+    var ref: DatabaseReference?
+    
+    @IBOutlet weak var textFieldName: UITextField!
+    @IBOutlet weak var textFieldGenre: UITextView!
+    @IBOutlet var button:UIButton?
+  
+    @IBAction func boton(){
+
+        let db = Firestore.firestore()
+       db.collection("Foros").document(textFieldName.text!).setData([
+            "Mensaje": textFieldGenre.text!
+            ])
+        
+//        print("--------->>", db3)
+//        ref?.child("Foross").childByAutoId().setValue(textFieldName.text)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+//        ref = Database.database().reference()
+        
     }
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func grabar(){
-        DataHolder.sharedInstance.miOForo.sTitulo = Titulo?.text
-        let sTransicionNotas:String = "Vforo"
-        self.performSegue(withIdentifier: sTransicionNotas, sender: self)
-        self.crearEvento()
-    }
     
-    func crearEvento(){
-        let ev:OForoNuevo = OForoNuevo()
-        ev.sTitulo = DataHolder.sharedInstance.TituloF
-        DataHolder.sharedInstance.firestoreDB?.collection("Foros").addDocument(data: ev.getMap())
-        self.arFN.append(ev)
-        
-        
-    }
-
 }

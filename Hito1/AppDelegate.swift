@@ -8,6 +8,7 @@
 import Firebase
 import UIKit
 import CoreData
+import FirebaseDatabase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -27,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window.makeKeyAndVisible()
         }
          */
+
         return true
     }
 
