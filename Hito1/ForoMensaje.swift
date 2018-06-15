@@ -29,6 +29,8 @@ class ForoMensaje: UIViewController, UITableViewDelegate, UITableViewDataSource 
 //        }
 
         super.viewDidLoad()
+    
+        
         let strRuta:String = String(format: "Foros/%@/Mensaje",DataHolder.sharedInstance.sIDseleccion!)
         DataHolder.sharedInstance.firestoreDB?.collection(strRuta).addSnapshotListener() { (querySnapshot, err) in
             if let err = err {
