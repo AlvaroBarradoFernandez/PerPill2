@@ -29,7 +29,10 @@ class ForoNuevoViewController: UIViewController{
        db.collection("Foros").document(textFieldName.text!).setData([
             "Mensaje": textFieldGenre.text!
             ])
-        
+        db.collection("Foros").document(textFieldName.text!).collection("Mensaje").document("Mensaje").setData([
+            "Mensaje": textFieldGenre.text!
+            ])
+        self.performSegue(withIdentifier: "Grabar", sender: self)
 //        print("--------->>", db3)
 //        ref?.child("Foross").childByAutoId().setValue(textFieldName.text)
     }

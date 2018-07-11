@@ -507,6 +507,7 @@
                                 <state key="normal" title="Grabar"/>
                                 <connections>
                                     <action selector="boton" destination="SLU-Op-pvr" eventType="touchUpInside" id="YPJ-TQ-Skc"/>
+                                    <segue destination="jfn-TU-FaA" kind="show" identifier="Grabar" id="6Rw-8B-Scz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePj-ze-aJJ">
@@ -1137,11 +1138,9 @@
         <image name="Pidlora Azul" width="237" height="213"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="j6F-VF-wkf"/>
-        <segue reference="qUH-st-vC3"/>
         <segue reference="33P-jq-OCS"/>
         <segue reference="FNV-P3-Wbk"/>
-        <segue reference="93F-Kz-UuI"/>
+        <segue reference="6Rw-8B-Scz"/>
         <segue reference="HgM-af-4WT"/>
     </inferredMetricsTieBreakers>
 </document>
